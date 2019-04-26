@@ -30,4 +30,5 @@ You can then save the conversion by clicking the save button. You can also press
 
 You can also navigate between pages with the tab navigator at the bottom of the screen as shown in the gif bellow.
 
-![](app2gif)
+![](app2.gif)
+
