@@ -20,3 +20,6 @@ After cloning the repository, run the following from your Terminal (Mac / Linux)
 ```
 ionic serve
 ```
+
+
+![](app1.gif)
