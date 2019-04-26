@@ -20,6 +20,10 @@ After cloning the repository, run the following from your Terminal (Mac / Linux)
 ```
 ionic serve
 ```
+You should be asked to install dependencies to which you type "y"
+
+![picture](dependencies.png)
+
 ## User Guide
 
 When the app initializes pick the currency to convert from and the currency to convert to as showed on the gif.
