@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>ExchangePT</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="content-bgColor">
+  <div class="contents">
+    <ion-row>
+      <ion-input type="number" class="value-input" [(ngModel)]="exAmount1" placeholder="from" (keyup)="convert1()"></ion-input>
+    </ion-row>
+
+    <ion-row>
+      <ion-input type="number" class="value-input" [(ngModel)]="exAmount2" placeholder="to" (keyup)="convert2()"></ion-input>
+    </ion-row>
+  </div>
+
+  <ion-row>
+    <ion-col class="selectors">
+      <select class="select-list" [(ngModel)]="exRate1" (change)="convert1()">
+        <option selected value="{{rateEUR}}">EUR {{rateEUR}}</option>
+        <option value="{{rateGBP}}">GBP {{rateGBP}}</option>
+        <option value="{{rateUSD}}">USD {{rateUSD}}</option>
+        <option value="{{rateJPY}}">JPY {{rateJPY}}</option>
+        <option value="{{rateCAD}}">CAD {{rateCAD}}</option>
+        <option value="{{rateCHF}}">CHF {{rateCHF}}</option>
+        <option value="{{rateAUD}}">AUD {{rateAUD}}</option>
+      </select>
+    </ion-col>
+
+    <ion-col>
+      <select class="select-list" [(ngModel)]="exRate2" (change)="convert1()">
+        <option selected value="{{rateEUR}}">EUR {{rateEUR}}</option>
+        <option value="{{rateGBP}}">GBP {{rateGBP}}</option>
+        <option value="{{rateUSD}}">USD {{rateUSD}}</option>
+        <option value="{{rateJPY}}">JPY {{rateJPY}}</option>
+        <option value="{{rateCAD}}">CAD {{rateCAD}}</option>
+        <option value="{{rateCHF}}">CHF {{rateCHF}}</option>
+        <option value="{{rateAUD}}">AUD {{rateAUD}}</option>
+      </select>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button class="save-button" (click)="storeConversion()">Save conversion</button>
+      <button ion-button class="save-button" (click)="getPreviousConversions()">Get All</button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-card class="card-view">
+      <ion-card-header class="card-header">
+        <h2>Your last conversions:</h2>
+      </ion-card-header>
+      <ion-card-content class="card-contents">
+        <ion-list>
+          <ion-item *ngFor="let amount of conversionHistory">
+            {{amount}}
+          </ion-item>  
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+
+</ion-content>
+
