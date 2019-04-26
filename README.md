@@ -20,3 +20,15 @@ After cloning the repository, run the following from your Terminal (Mac / Linux)
 ```
 ionic serve
 ```
+## User Guide
+
+When the app initializes pick the currency to convert from and the currency to convert to as showed on the gif.
+
+You can then save the conversion by clicking the save button. You can also press the get button to get your 10 previous convertions.
+
+![](app1.gif)
+
+You can also navigate between pages with the tab navigator at the bottom of the screen as shown in the gif bellow.
+
+![](app2.gif)
+
